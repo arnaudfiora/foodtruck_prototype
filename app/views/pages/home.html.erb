@@ -3,14 +3,39 @@
 
 <div class="home-container">
 
+  <!-- Embedded ruby to remove when controller properly set up -->
+  <% @foodtrucks = Foodtruck.all; @users = User.all %>
+  <% foodtruck = @foodtrucks.first; user = @users[2] %>
+  <!-- ----- -->
+
+  <!-- KEEP THIS CARD BELOW AS TEMPLATE  -->
+  <% @foodtrucks.each do |foodtruck| %>
+    <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
+    <%= link_to root_path, class: "link-to" do %>
+        <div class="card-foodtruck">
+          <% @foodtrucks = Foodtruck.all; @users = User.all %>
+          <% foodtruck = @foodtrucks.first; user = @users[2] %>
+          <img src="<%= foodtruck.ftphotos.last.photo %>" />
+          <div class="card-foodtruck-infos">
+            <div>
+              <h2><%= foodtruck.name %></h2>
+              <p><%= foodtruck.category %> - Up to <%= foodtruck.capacity %> persons - <%= foodtruck.price %>€/per person</p>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  <% end %>
+
+
+  <!-- REMOVE ALL THESE EXAMPLES WHEN DATABASE IS SEEDED -->
   <div class="card-foodtruck">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
     <div class="card-foodtruck-infos">
       <div>
-        <h2>TODO: Name of the food truck</h2>
-        <p>TODO: Add Category and capacity</p>
+        <h2>TODO: Name</h2>
+        <p>TODO: Category</p>
       </div>
-      <h2 class="card-foodtruck-pricing">TODO:Price /per person</h2>
+      <h2 class="card-foodtruck-pricing">Price €/per person</h2>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-foodtruck-user avatar-bordered" />
     </div>
   </div>
@@ -19,34 +44,10 @@
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
     <div class="card-foodtruck-infos">
       <div>
-        <h2>TODO: Name of the food truck</h2>
-        <p>TODO: Add Category and capacity</p>
+        <h2>TODO: Name</h2>
+        <p>TODO: Category</p>
       </div>
-      <h2 class="card-foodtruck-pricing">TODO:Price /per person</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-foodtruck-user avatar-bordered" />
-    </div>
-  </div>
-
-  <div class="card-foodtruck">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-foodtruck-infos">
-      <div>
-        <h2>TODO: Name of the food truck</h2>
-        <p>TODO: Add Category and capacity</p>
-      </div>
-      <h2 class="card-foodtruck-pricing">TODO:Price /per person</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-foodtruck-user avatar-bordered" />
-    </div>
-  </div>
-
-  <div class="card-foodtruck">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-foodtruck-infos">
-      <div>
-        <h2>TODO: Name of the food truck</h2>
-        <p>TODO: Add Category and capacity</p>
-      </div>
-      <h2 class="card-foodtruck-pricing">TODO:Price /per person</h2>
+      <h2 class="card-foodtruck-pricing">Price €/per person</h2>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-foodtruck-user avatar-bordered" />
     </div>
   </div>
