@@ -1,21 +1,17 @@
-<%= render 'shared/navbar' %>
+
 <%= render 'shared/banner' %>
 
 <div class="home-container">
 
   <!-- Embedded ruby to remove when controller properly set up -->
-  <% @foodtrucks = Foodtruck.all; @users = User.all %>
-  <% foodtruck = @foodtrucks.first; user = @users[2] %>
+  <% @foodtrucks = Foodtruck.all %>
   <!-- ----- -->
 
-  <!-- KEEP THIS CARD BELOW AS TEMPLATE  -->
   <% @foodtrucks.each do |foodtruck| %>
     <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
     <%= link_to root_path, class: "link-to" do %>
         <div class="card-foodtruck">
-          <% @foodtrucks = Foodtruck.all; @users = User.all %>
-          <% foodtruck = @foodtrucks.first; user = @users[2] %>
-          <img src="<%= foodtruck.ftphotos.last.photo %>" />
+          <img src="<%= foodtruck.ftphotos.first.photo %>" />
           <div class="card-foodtruck-infos">
             <div>
               <h2><%= foodtruck.name %></h2>
@@ -25,31 +21,5 @@
         </div>
     <% end %>
   <% end %>
-
-
-  <!-- REMOVE ALL THESE EXAMPLES WHEN DATABASE IS SEEDED -->
-  <div class="card-foodtruck">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-foodtruck-infos">
-      <div>
-        <h2>TODO: Name</h2>
-        <p>TODO: Category</p>
-      </div>
-      <h2 class="card-foodtruck-pricing">Price €/per person</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-foodtruck-user avatar-bordered" />
-    </div>
-  </div>
-
-  <div class="card-foodtruck">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-foodtruck-infos">
-      <div>
-        <h2>TODO: Name</h2>
-        <p>TODO: Category</p>
-      </div>
-      <h2 class="card-foodtruck-pricing">Price €/per person</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-foodtruck-user avatar-bordered" />
-    </div>
-  </div>
 
 </div>

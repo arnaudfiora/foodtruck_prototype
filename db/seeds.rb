@@ -184,12 +184,12 @@ puts "One foodtruck added"
 
 foodtruck = Foodtruck.create!(
   name: "La charette gourmande",
-  description: "We offer a varied choice of giant crepes 'sweet', pancakes Breton buckwheat "salted" ... Everything is homemade in front of you, with products of the highest quality, 100% handmade.Whether it's an anniversary, a communion, a wedding, a company party, a neighborhood party, a festival ..., each event will be personalized and taken in hand by La Charrette Gourmande. Our motto: flexibility and quality to serve you!",
+  description: "We offer a varied choice of giant crepes 'sweet', pancakes Breton buckwheat 'salted' ... Everything is homemade in front of you, with products of the highest quality, 100 percent handmade.Whether it's an anniversary, a communion, a wedding, a company party, a neighborhood party, a festival ..., each event will be personalized and taken in hand by La Charrette Gourmande. Our motto: flexibility and quality to serve you!",
   capacity: 30,
   price: 5,
   category: 'desert',
   user: User.find((1..4).to_a.sample.to_i)
-
+)
 Ftphoto.create!(photo: 'https://sosoir.lesoir.be/sites/default/files/styles/image_690x460/public/encadre/g2.jpg?itok=2LI6weta', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2FCAC.2Fvar.2Fcui.2Fstorage.2Fimages.2Fevenements.2Fchandeleur-vous-allez-succomber-a-nos-recettes-de-crepes.2F3333930-2-fre-FR.2Fchandeleur-vous-allez-succomber-a-nos-recettes-de-crepes.2Ejpg/748x372/quality/80/crop-from/center/crepes-au-chocolat.jpeg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://static.lexpress.fr/medias_11307/w_1635,h_915,c_crop,x_123,y_328/w_480,h_270,c_fill,g_north/v1485531738/crepe-lardon-oeuf-fromage_5789615.jpg', foodtruck: foodtruck)
@@ -207,7 +207,7 @@ foodtruck = Foodtruck.create!(
   price: 22,
   category: 'American',
   user: User.find((1..4).to_a.sample.to_i)
-
+)
 Ftphoto.create!(photo: 'https://cdn-5d07e425f911d10dc8cfa42b.closte.com/wp-content/uploads/oerburger-bus-foodtruck-buiten-1-e1516205553970.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'http://laurencariscooks.com/1_lcc/wp-content/uploads/2016/08/Black-Bean-Burgers-4-600x600.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'http://www.rollingevents.nl/media/zoo/images/IMG_20150626_151821401_HDR_c0747ebee08ced8e6a0a3122c2723379.jpg', foodtruck: foodtruck)
