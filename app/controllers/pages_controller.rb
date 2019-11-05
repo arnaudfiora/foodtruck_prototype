@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   def home
   end
-  def consumer_stories
+
+  def dashboard
+    @foodtrucks = Foodtruck.where(user_id: current_user)
+    @bookings = Booking.where(user_id: current_user)
   end
+      
 end

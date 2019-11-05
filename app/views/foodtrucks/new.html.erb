@@ -1,2 +1,9 @@
-<h1>Foodtrucks#new</h1>
-<p>Find me in app/views/foodtrucks/new.html.erb</p>
+<h1>Creating a new foodtruck</h1>
+<%= simple_form_for (@foodtruck) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category %>
+  <%= f.input :price %>
+  <%= f.input :capacity %>
+  <%= f.input :description %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
