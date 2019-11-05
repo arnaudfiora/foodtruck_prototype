@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Home page </h1>
+<p>Visit our website</p>
+<ul>
+  <li><%= link_to "login", new_user_session_path %></li>
+  <p>if no account signup now:</p>
+  <li><%= link_to "signup", new_user_registration_path %></li>
+</ul>
