@@ -1,0 +1,8 @@
+<ol>
+  <% @bookings.each do |booking| %>
+    <li>
+      <p><%=  booking.foodtruck.name %></p>
+      <p><%=  booking.date %></p>
+    </li>
+  <% end %>
+</ol
