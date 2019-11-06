@@ -1,16 +1,15 @@
 class BookingsController < ApplicationController
   before_action :set_foodtruck, only: [:new, :create]
+
   def index
     @bookings = Booking.all
   end
 
-   def show
-   end
+  def show; end
 
-
-   def new
+  def new
     @booking = Booking.new
-   end
+  end
 
   def create
     @booking = Booking.new(booking_params)
@@ -18,25 +17,33 @@ class BookingsController < ApplicationController
     @booking.foodtruck = @foodtruck
 
     if @booking.save
-    redirect_to dashboard_path
+      redirect_to dashboard_path
     else
       render :new
     end
   end
 
-
-  def update
+  def edit
+    @foodtruck = Foodtruck.find(params[:foodtruck_id])
+    @booking = Booking.find(params[:id])
   end
 
-private
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.save
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy; end
+
+  private
+
   def booking_params
     params.require(:booking).permit(:date)
   end
-
-  def destroy
-  end
-
-  private
 
   def set_foodtruck
     @foodtruck = Foodtruck.find(params[:foodtruck_id])

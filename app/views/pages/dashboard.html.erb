@@ -46,11 +46,23 @@
 <div class="bookings-container">
   <% @bookings_received.each do |booking| %>
     <div class="booking">
+
       <img src='<%= booking.user.avatar %>' class="avatar-large" />
+
       <div class="booking-content">
         <p><small><%= booking.user.username %></small></p>
         <p><strong><%= booking.foodtruck.name %></strong> - <%= booking.date %></p>
       </div>
+
+      <div class="booking-actions">
+        <% if booking.confirmed %>
+          <!-- <i class="fas fa-check"></i> -->
+          <p>OK</p>
+        <% else %>
+          <%= link_to "Validate", edit_foodtruck_booking_path(booking.foodtruck, booking) %>
+        <% end %>
+      </div>
+
     </div>
   <% end %>
 </div>
@@ -61,13 +73,22 @@
 
 <div class="bookings-container">
   <% @bookings_made.each do |booking| %>
+
     <div class="booking">
+
       <img src='<%= booking.user.avatar %>' class="avatar-large" />
+
       <div class="booking-content">
         <p><small><%= booking.user.username %></small></p>
         <p><strong><%= booking.foodtruck.name %></strong> - <%= booking.date %></p>
       </div>
+<!--
+      <div class="booking-actions">
+        <i class="fas fa-check"></i>
+      </div> -->
+
     </div>
+
   <% end %>
 </div>
 
