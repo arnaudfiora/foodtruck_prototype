@@ -9,7 +9,7 @@
 
   <% @foodtrucks.each do |foodtruck| %>
     <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
-    <%= link_to root_path, class: "link-to" do %>
+    <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
         <div class="card-foodtruck">
           <img src="<%= foodtruck.ftphotos.first.photo %>" />
           <div class="card-foodtruck-infos">

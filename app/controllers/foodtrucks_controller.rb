@@ -1,4 +1,6 @@
 class FoodtrucksController < ApplicationController
+  before_action :set_foodtruck, only: :show
+
   def show; end
 
   def new
@@ -18,6 +20,10 @@ class FoodtrucksController < ApplicationController
   def update; end
 
   private
+
+  def set_foodtruck
+    @foodtruck = Foodtruck.find(params[:id])
+  end
 
   def foodtruck_params
     params.require(:foodtruck).permit(:name, :category, :price, :capacity, :description)
