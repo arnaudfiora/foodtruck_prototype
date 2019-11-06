@@ -1,3 +1,8 @@
+Ftphoto.destroy_all
+Foodtruck.destroy_all
+User.destroy_all
+
+
 # ----- ADDING USERS ----- #
 puts "About to add some users... "
 
@@ -42,7 +47,7 @@ foodtruck = Foodtruck.create!(
   capacity: 25,
   price: 20,
   category: 'Italian',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://s3-media4.fl.yelpcdn.com/bphoto/BW1fVd1W2p7H-pTL-LzA9g/o.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://s3-media4.fl.yelpcdn.com/bphoto/_KMvAKZwW0Eb4GUCEXOk1A/o.jpg', foodtruck: foodtruck)
@@ -59,7 +64,7 @@ foodtruck = Foodtruck.create!(
   capacity: 30,
   price: 15,
   category: 'Thai',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://www.miamthai.com/wp-content/uploads/2016/10/THA_8119.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/3d/11/d4/kung-pao-box.jpg', foodtruck: foodtruck)
@@ -77,7 +82,7 @@ foodtruck = Foodtruck.create!(
   capacity: 20,
   price: 18,
   category: 'American',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'http://www.bagelstreet.be/wp-content/uploads/2018/04/20170610_122831.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://www.foodette.fr/files/products/bagel-saumon-fume-artisanal-aneth-roquette-petitsuisse-baierose-aveclogo-web-ok.jpg', foodtruck: foodtruck)
@@ -95,7 +100,7 @@ foodtruck = Foodtruck.create!(
   capacity: 30,
   price: 15,
   category: 'Mexican',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://sweetoburrito.com/wp-content/uploads/2016/03/SweetoTrailerPretty-1030x772.png', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://www.alsothecrumbsplease.com/wp-content/uploads/2018/01/Guacamole-Beef-Burrito-4.jpg', foodtruck: foodtruck)
@@ -114,7 +119,7 @@ Invite Louis with his professional mobile oven and you have the guarantee that y
   capacity: 15,
   price: 15,
   category: 'Italian',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://y-parc.ch/app/uploads/2019/05/basilico_pizzeria.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://m.bettybossi.ch/static/rezepte/x/bb_itku120801_0243a_x.jpg', foodtruck: foodtruck)
@@ -133,7 +138,7 @@ foodtruck = Foodtruck.create!(
   capacity: 30,
   price: 20,
   category: 'Chinese',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://images.squarespace-cdn.com/content/v1/59555598d482e964f691f6a6/1516554760951-B05U5KRTLBLVZSXDMJ22/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/IMG_0201.JPG', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://images.squarespace-cdn.com/content/v1/59555598d482e964f691f6a6/1508875033613-4NP6I3ULHPSUEY3E1R7B/ke17ZwdGBToddI8pDm48kNxzzBW4YIEbelx5P07PIpt7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcDbKvAlAhSgQG0DWqK8eP3jTIlV9DgU2lk93FL5WzWAocirJjwNwxkbauT3i3vPKg/5812B915-6368-449E-B43F-1FEAB03344E5.jpeg?format=2500w', foodtruck: foodtruck)
@@ -151,7 +156,7 @@ foodtruck = Foodtruck.create!(
   capacity: 50,
   price: 3,
   category: 'Ice-Cream',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://image.made-in-china.com/2f0j00hFptDGZIOugB/5-Meter-Mobile-Ice-Cream-Fast-Food-Truck-Van-for-Sale.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://portsoyicecream.co.uk/site/wp-content/uploads/ice-cream-collection-1554x1171.jpg', foodtruck: foodtruck)
@@ -170,7 +175,7 @@ foodtruck = Foodtruck.create!(
   capacity: 40,
   price: 3,
   category: 'desert',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://bestofnj.com/wp-content/uploads/2018/04/House-of-Cupcakes_Food-Truck-e1523992752202.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://www.foodtrucksin.com/sites/default/files/Cupcake_Truck_web.jpg', foodtruck: foodtruck)
@@ -188,7 +193,7 @@ foodtruck = Foodtruck.create!(
   capacity: 30,
   price: 5,
   category: 'desert',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://sosoir.lesoir.be/sites/default/files/styles/image_690x460/public/encadre/g2.jpg?itok=2LI6weta', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2FCAC.2Fvar.2Fcui.2Fstorage.2Fimages.2Fevenements.2Fchandeleur-vous-allez-succomber-a-nos-recettes-de-crepes.2F3333930-2-fre-FR.2Fchandeleur-vous-allez-succomber-a-nos-recettes-de-crepes.2Ejpg/748x372/quality/80/crop-from/center/crepes-au-chocolat.jpeg', foodtruck: foodtruck)
@@ -206,7 +211,7 @@ foodtruck = Foodtruck.create!(
   capacity: 60,
   price: 22,
   category: 'American',
-  user: User.find((1..4).to_a.sample.to_i)
+  user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://cdn-5d07e425f911d10dc8cfa42b.closte.com/wp-content/uploads/oerburger-bus-foodtruck-buiten-1-e1516205553970.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'http://laurencariscooks.com/1_lcc/wp-content/uploads/2016/08/Black-Bean-Burgers-4-600x600.jpg', foodtruck: foodtruck)
