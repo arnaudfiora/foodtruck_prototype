@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-
-  resources :foodtrucks do
+  resources :foodtrucks, except: :index do
     resources :bookings, only: %i[new create show]
   end
 
@@ -9,5 +8,4 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get "pages/dashboard", to: "pages#dashboard", as: "dashboard"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

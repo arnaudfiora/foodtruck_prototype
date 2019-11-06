@@ -1,10 +1,5 @@
 class FoodtrucksController < ApplicationController
-  def index
-    @foodtrucks = Foodtruck.all
-  end
-
-  def show
-  end
+  def show; end
 
   def new
     @foodtruck = Foodtruck.new
@@ -14,16 +9,16 @@ class FoodtrucksController < ApplicationController
     @foodtruck = Foodtruck.new(foodtruck_params)
     @foodtruck.user = current_user
     if @foodtruck.save
-    redirect_to foodtrucks_path
+      redirect_to dashboard_path
     else
       render :new
     end
   end
 
-  def update
-  end
+  def update; end
 
-private
+  private
+
   def foodtruck_params
     params.require(:foodtruck).permit(:name, :category, :price, :capacity, :description)
   end

@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :home
+
   def home
   end
 
@@ -6,5 +8,4 @@ class PagesController < ApplicationController
     @foodtrucks = Foodtruck.where(user_id: current_user)
     @bookings = Booking.where(user_id: current_user)
   end
-      
 end
