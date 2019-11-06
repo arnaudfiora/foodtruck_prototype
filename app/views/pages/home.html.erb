@@ -3,12 +3,7 @@
 
 <div class="home-container">
 
-  <!-- Embedded ruby to remove when controller properly set up -->
-  <% @foodtrucks = Foodtruck.all %>
-  <!-- ----- -->
-
   <% @foodtrucks.each do |foodtruck| %>
-    <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
 
     <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
 
