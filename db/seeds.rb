@@ -2,8 +2,8 @@ Ftphoto.destroy_all
 Foodtruck.destroy_all
 User.destroy_all
 
-
 # ----- ADDING USERS ----- #
+
 puts "About to add some users... "
 
 users_attributes = [
@@ -35,7 +35,7 @@ users_attributes = [
 User.create!(users_attributes)
 
 puts "4 users created"
-# ------------------------------ #
+ #
 
 # ----- ADDING FOODTRUCKS ----- #
 puts "About to add some foodtrucks... "

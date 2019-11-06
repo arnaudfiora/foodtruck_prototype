@@ -1,8 +1,87 @@
-<ol>
-  <% @bookings.each do |booking| %>
-    <li>
-      <p><%=  booking.foodtruck.name %></p>
-      <p><%=  booking.date %></p>
-    </li>
+<%= render 'shared/navbar' %>
+
+<div class="dashboard-banner">
+  <h1><%= current_user.username %>'s Dashboard</h1>
+</div>
+
+<div class="line-separator">
+  <div class="line"></div>
+</div>
+
+<div class="dashboard-title">
+  <h2>My foodtrucks -<%= link_to "Add one", new_foodtruck_path, class: "new-ft-button"%></h2>
+</div>
+
+<div class="home-container">
+  <% @foodtrucks.each do |foodtruck| %>
+    <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
+    <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
+        <div class="card-foodtruck">
+
+          <% if foodtruck.ftphotos.first %>
+            <img src="<%= foodtruck.ftphotos.first.photo %>" />
+          <% else %>
+            <%= image_tag "profile.png" %>
+          <% end %>
+
+          <div class="card-foodtruck-infos">
+            <div>
+              <h2><%= foodtruck.name %></h2>
+              <p><%= foodtruck.category %> - Up to <%= foodtruck.capacity %> persons - <%= foodtruck.price %>€/per person</p>
+            </div>
+          </div>
+        </div>
+    <% end %>
   <% end %>
-</ol
+</div>
+
+<div class="line-separator">
+  <div class="line"></div>
+</div>
+
+<div class="dashboard-title">
+  <h2>Bookings received (as a foodtruck owner)</h2>
+</div>
+
+<div class="bookings-container">
+  <% @bookings_received.each do |booking| %>
+    <div class="booking">
+      <img src='<%= booking.user.avatar %>' class="avatar-large" />
+      <div class="booking-content">
+        <p><small><%= booking.user.username %></small></p>
+        <p><strong><%= booking.foodtruck.name %></strong> - <%= booking.date %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="dashboard-title">
+  <h2>Bookings made (as a consumer)</h2>
+</div>
+
+<div class="bookings-container">
+  <% @bookings_made.each do |booking| %>
+    <div class="booking">
+      <img src='<%= booking.user.avatar %>' class="avatar-large" />
+      <div class="booking-content">
+        <p><small><%= booking.user.username %></small></p>
+        <p><strong><%= booking.foodtruck.name %></strong> - <%= booking.date %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
