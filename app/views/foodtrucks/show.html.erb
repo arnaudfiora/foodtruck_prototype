@@ -8,13 +8,10 @@
       <div class="bg-white text-dark py-5 px-4 rounded h-100 text-center">
         <h1 class="mb-4"><%= @foodtruck.name %></h1>
         <h2 class="mb-4"><%= @foodtruck.category %></h2>
-        <h2 class="mb-4">Pizza</h2>
-        <h2 class="mb-4">Pasta</h2>
-        <h2>Cannoli</h2>
       </div>
     </div>
     <div class="col-8">
-      <%= image_tag "default.png", class: "w-100" %>
+      <img style="height: 400px; width: 100%; background-size: cover;" src="<%= @foodtruck.ftphotos.first.photo %> " alt="">
     </div>
 
   <!-- 2nd block-->
@@ -24,15 +21,15 @@
       <div class="bg-white text-dark rounded h-100 text-center">
           <div class="col-12 bg-secondary d-flex justify-content-between">
             <div class="text-left">
-              <h3>Price</h3>
-              <h3>Capacity</h3>
+              <h3><%= @foodtruck.price %>€/ per person</h3>
+              <h3>Up to <%= @foodtruck.capacity %> persons</h3>
             </div>
             <div class="d-flex align-items-center">
-              <button type="button" class="btn btn-dark">BOOK NOW</button>
+              <%= link_to "Book this foodtruck", new_foodtruck_booking_path(@foodtruck), class: "btn btn-dark" %>
             </div>
           </div>
           <div class="text-left">
-        <p id="p-show-page"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit euismod ligula dictum ullamcorper. Proin et ante vitae augue feugiat tempus. Etiam arcu orci, egestas ut pulvinar ut, sollicitudin ac arcu. Etiam ultricies vestibulum egestas. Nulla sit amet mattis enim. Curabitur vel lacus pellentesque, commodo ipsum sed, tempor mi. Curabitur quis sagittis ex.</p>
+        <p id="p-show-page"><%= @foodtruck.description %></p>
         </div>
       </div>
     </div>
