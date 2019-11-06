@@ -11,7 +11,13 @@
     <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
     <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
         <div class="card-foodtruck">
-          <img src="<%= foodtruck.ftphotos.first.photo %>" />
+
+          <% if foodtruck.ftphotos.first %>
+            <img src="<%= foodtruck.ftphotos.first.photo %>" />
+          <% else %>
+            <%= image_tag "profile.png" %>
+          <% end %>
+
           <div class="card-foodtruck-infos">
             <div>
               <h2><%= foodtruck.name %></h2>
