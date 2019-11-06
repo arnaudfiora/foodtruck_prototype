@@ -1,4 +1,45 @@
-<div style="background-color: white">
+<%= render 'shared/navbar' %>
+
+<div class="dashboard-banner">
+  <h1><%= current_user.username %>'s Dashboard</h1>
+</div>
+
+<div class="dashboard-title">
+  <h2>My foodtrucks</h2>
+  <%= link_to new_foodtruck_path, class: "new-ft-button" do %>
+    <i class="fas fa-plus"></i>
+  <% end %>
+</div>
+
+<div class="home-container">
+  <% @foodtrucks.each do |foodtruck| %>
+    <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
+    <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
+        <div class="card-foodtruck">
+
+          <% if foodtruck.ftphotos.first %>
+            <img src="<%= foodtruck.ftphotos.first.photo %>" />
+          <% else %>
+            <%= image_tag "profile.png" %>
+          <% end %>
+
+          <div class="card-foodtruck-infos">
+            <div>
+              <h2><%= foodtruck.name %></h2>
+              <p><%= foodtruck.category %> - Up to <%= foodtruck.capacity %> persons - <%= foodtruck.price %>€/per person</p>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="bookings-container">
+
+  <div class="dashboard-title">
+    <h2>My bookings</h2>
+  </div>
+
   <ol>
     <% @bookings.each do |booking| %>
       <li>
@@ -6,26 +47,5 @@
         <p><%=  booking.date %></p>
       </li>
     <% end %>
-  </ol
-
-  <h1>All Foodtrucks</h1>
-  <ol></ol>
-  <%@foodtrucks.each do |foodtruck| %>
-  <li>
-  <%= foodtruck.name %>
-  <br>
-  <%= foodtruck.category %>
-  <%= foodtruck.price %>
-  <%= foodtruck.description %>
-  <%= link_to "book this foodtruck", new_foodtruck_booking_path(foodtruck) %>
-  </li>
-  <% end %>
   </ol>
-
-  <br>
-  <h2>What do you want to do?</h2>
-  <%= link_to "Add a new foodtruck", new_foodtruck_path %>
-  <br>
-   <%= link_to "All my bookings" , dashboard_path %>
-
 </div>
