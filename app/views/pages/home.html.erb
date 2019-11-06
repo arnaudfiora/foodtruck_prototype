@@ -1,9 +1,4 @@
 <%= render 'shared/navbar' %>
-<ul>
-  <li><%= link_to "login", new_user_session_path %></li>
-  <p>if no account signup now:</p>
-  <li><%= link_to "signup", new_user_registration_path %></li>
-</ul>
 <%= render 'shared/banner' %>
 
 <div class="home-container">
@@ -14,9 +9,15 @@
 
   <% @foodtrucks.each do |foodtruck| %>
     <!-- Change link_to with the right path: foodtruck_path(foodtruck) -->
-    <%= link_to root_path, class: "link-to" do %>
+    <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
         <div class="card-foodtruck">
-          <img src="<%= foodtruck.ftphotos.first.photo %>" />
+
+          <% if foodtruck.ftphotos.first %>
+            <img src="<%= foodtruck.ftphotos.first.photo %>" />
+          <% else %>
+            <%= image_tag "profile.png" %>
+          <% end %>
+
           <div class="card-foodtruck-infos">
             <div>
               <h2><%= foodtruck.name %></h2>

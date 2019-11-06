@@ -1,8 +1,31 @@
-<ol>
-  <% @bookings.each do |booking| %>
-    <li>
-      <p><%=  booking.foodtruck.name %></p>
-      <p><%=  booking.date %></p>
-    </li>
+<div style="background-color: white">
+  <ol>
+    <% @bookings.each do |booking| %>
+      <li>
+        <p><%=  booking.foodtruck.name %></p>
+        <p><%=  booking.date %></p>
+      </li>
+    <% end %>
+  </ol
+
+  <h1>All Foodtrucks</h1>
+  <ol></ol>
+  <%@foodtrucks.each do |foodtruck| %>
+  <li>
+  <%= foodtruck.name %>
+  <br>
+  <%= foodtruck.category %>
+  <%= foodtruck.price %>
+  <%= foodtruck.description %>
+  <%= link_to "book this foodtruck", new_foodtruck_booking_path(foodtruck) %>
+  </li>
   <% end %>
-</ol
+  </ol>
+
+  <br>
+  <h2>What do you want to do?</h2>
+  <%= link_to "Add a new foodtruck", new_foodtruck_path %>
+  <br>
+   <%= link_to "All my bookings" , dashboard_path %>
+
+</div>
