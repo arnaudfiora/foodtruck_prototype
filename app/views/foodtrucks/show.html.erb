@@ -1,2 +1,38 @@
-<h1>Foodtrucks#show</h1>
-<p>Find me in app/views/foodtrucks/show.html.erb</p>
+<div class="container">
+
+  <!-- 1st block-->
+  <div class="row">
+    <div class="col-4">
+      <div class="bg-white text-dark py-5 px-4 rounded h-100 text-center">
+        <h1 class="mb-4"><%= @foodtruck.name %></h1>
+        <h2 class="mb-4"><%= @foodtruck.category %></h2>
+        <h2 class="mb-4">Pizza</h2>
+        <h2 class="mb-4">Pasta</h2>
+        <h2>Cannoli</h2>
+      </div>
+    </div>
+    <div class="col-8">
+      <%= image_tag "foodtruck-image.jpeg", class: "w-100" %>
+    </div>
+
+  <!-- 2nd block-->
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="bg-white text-dark rounded h-100 text-center">
+          <div class="col-12 bg-secondary text-left">
+            <h2>Price</h2>
+            <h2>Capacity</h2>
+            <button type="button" class="btn btn-dark text-right">BOOK NOW</button>
+          </div>
+        <h1 class="mb-2"><%= @foodtruck.name %></h1>
+        <h1 class="mb-2"><%= @foodtruck.name %></h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3rd block-->
+  <div class="row mt-4">
+qsdqsds
+  </div>
+</div>
