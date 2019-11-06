@@ -1,0 +1,5 @@
+<h1>Edit foodtruck booking</h1>
+<%= simple_form_for ([@foodtruck, @booking]) do |f| %>
+  <%= f.input :confirmed %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
