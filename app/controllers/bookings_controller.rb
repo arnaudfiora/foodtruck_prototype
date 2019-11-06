@@ -30,6 +30,8 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+
     if @booking.save
       redirect_to dashboard_path
     else
@@ -42,7 +44,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:date, :confirmed)
   end
 
   def set_foodtruck

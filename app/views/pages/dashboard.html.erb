@@ -57,7 +57,7 @@
       <div class="booking-actions">
         <% if booking.confirmed %>
           <!-- <i class="fas fa-check"></i> -->
-          <p>OK</p>
+          <p style="font-weight: bold; color: green">Booking validated</p>
         <% else %>
           <%= link_to "Validate", edit_foodtruck_booking_path(booking.foodtruck, booking) %>
         <% end %>
