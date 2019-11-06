@@ -14,7 +14,6 @@
   padding: 30px;
   border: 1px solid #f1f1f1;
 
-
 }
 
 #container h2{
@@ -28,4 +27,30 @@
 .form-inputs{
   color: white;
 }
+
+#container-new{
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 10%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 10%;
+
+}
+
+.sign-up-btn {
+
+  border-color: black;
+  border-radius: 15px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+padding: 5px, 5px;
+margin: 2px;
+
+
+
+}
+
+
 
