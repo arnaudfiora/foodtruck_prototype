@@ -14,7 +14,7 @@
       </div>
 
       <div class="booking-actions">
-        <% if booking.confirmed %>
+        <% if booking.booking_status == 'confirmed' %>
           <!-- <i class="fas fa-check"></i> -->
           <p style="font-weight: bold; color: green">Booking validated</p>
         <% else %>
