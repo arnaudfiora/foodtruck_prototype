@@ -15,6 +15,11 @@
 
 <%= render 'shared/my_foodtrucks' %>
 
-<%= render 'shared/bookings_received' %>
+<% if @bookings_received.first %>
+  <%= render 'shared/bookings_received' %>
+<% end %>
 
-<%= render 'shared/bookings_made' %>
+<% if @bookings_made.first %>
+  <%= render 'shared/bookings_made' %>
+<% end %>
+
