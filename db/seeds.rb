@@ -19,11 +19,37 @@ users_attributes = [
     avatar: 'https://avatars.githubusercontent.com/arnaudfiora',
     password: 'arnaudarnaud'
   },
+
+  {
+    username: 'Jeremy',
+    email: 'jermy@hotmail.com',
+    avatar: 'https://avatars1.githubusercontent.com/u/54903820?s=400&v=4',
+    password: 'jeremyjeremy'
+  },
+   {
+    username: 'romain',
+    email: 'rom@live.be',
+    avatar: 'https://avatars0.githubusercontent.com/u/55390887?s=400&v=4',
+    password: 'romrom'
+  },
   {
     username: 'Eloise',
     email: 'Eloise@25927.be',
     avatar: 'https://avatars.githubusercontent.com/elo29597',
     password: 'eloiseeloise'
+  },
+
+  {
+    username: 'Benjamin',
+    email: 'benji@kissous.be',
+    avatar: 'https://avatars3.githubusercontent.com/u/26152404?s=460&v=4',
+    password: 'benjibenji'
+  },
+  {
+    username: 'Jean',
+    email: 'Jeanvm@hotmail.be',
+    avatar: 'https://avatars3.githubusercontent.com/u/55579376?s=400&v=4',
+    password: 'jeanjean'
   },
   {
     username: 'Dylan',
@@ -155,7 +181,7 @@ foodtruck = Foodtruck.create!(
   description: "Happy  Ice Cream is created with this same passion. Our distinctive recipes combine rich ingredients to create mouthwatering flavors. Each flavor has been tested and refined to ensure every ice cream we shape tastes as good as possible. We have two different food trucks, both pink.",
   capacity: 50,
   price: 3,
-  category: 'Ice-Cream',
+  category: 'desert',
   user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://image.made-in-china.com/2f0j00hFptDGZIOugB/5-Meter-Mobile-Ice-Cream-Fast-Food-Truck-Van-for-Sale.jpg', foodtruck: foodtruck)
@@ -203,7 +229,7 @@ Ftphoto.create!(photo: 'http://www.coeurdecrepes.fr/images/gallery/fulls/Coeur_d
 
 puts "One foodtruck added"
 
-# FOODTRUCK 3
+# FOODTRUCK 10
 
 foodtruck = Foodtruck.create!(
   name: "Le vagabond",
@@ -218,6 +244,93 @@ Ftphoto.create!(photo: 'http://laurencariscooks.com/1_lcc/wp-content/uploads/201
 Ftphoto.create!(photo: 'http://www.rollingevents.nl/media/zoo/images/IMG_20150626_151821401_HDR_c0747ebee08ced8e6a0a3122c2723379.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'http://www.rollingevents.nl/images/trucks/module/teaserimage_oerburgerbus.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://www.austinchronicle.com/imager/b/original/2282275/6c88/FOOD.PlowBurger.JACK.jpg', foodtruck: foodtruck)
+
+puts "One foodtruck added"
+
+# FOODTRUCK 11
+
+foodtruck = Foodtruck.create!(
+  name: "Eat my truck",
+  description: "We revisit the American classic, with the refined products and the know-how of the French gastronomy. The Truck travels the whole of Belgium for all your private events, corporate, brunch weddings, etc."
+  capacity: 80,
+  price: 12,
+  category: 'American',
+  user: User.all.sample
+)
+Ftphoto.create!(photo: 'http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/xogynpnlwghojfosv6yo.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/b7731117742545.562be6992adc1.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://s3-prod.adage.com/s3fs-public/styles/800x600/public/HotDogs.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://cf-images.us-east-1.prod.boltdns.net/v1/static/5615998031001/99d86e2b-19ec-49db-bfe8-9463e6e2368c/0ba661c5-ce84-47cb-861a-a1af5d4e2b27/1280x720/match/image.jpg', foodtruck: foodtruck)
+
+puts "One foodtruck added"
+
+# FOODTRUCK 12
+
+foodtruck = Foodtruck.create!(
+  name: "Wan thai",
+  description: "Our Thai-Lounge truck meets all safety and hygiene standards. It is checked annually by approved inspection bodies.
+Discover, taste, taste we will delight your taste buds, with real quality products and a different cuisine, original or authentic."
+  capacity: 50,
+  price: 15,
+  category: 'thai',
+  user: User.all.sample
+)
+Ftphoto.create!(photo: 'http://www.wanthaifood.be/images/galery/wanthaifood17.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://www.freshpack.fr/wp-content/uploads/2015/09/NEMS-SUCR%C3%89_Thai-Tapas-3-Freshpack.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://because-gus.com/wp-content/uploads/2017/03/Wan-Thai-Food.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://www.errenskitchen.com/wp-content/uploads/2014/04/quick-and-easy-chinese-noodle-soup3-1.jpg', foodtruck: foodtruck)
+
+puts "One foodtruck added"
+
+# FOODTRUCK 13
+
+foodtruck = Foodtruck.create!(
+  name: "Copper Dog",
+  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape."
+  capacity: 30,
+  price: 20,
+  category: 'Mexican',
+  user: User.all.sample
+)
+Ftphoto.create!(photo: 'https://live.staticflickr.com/2833/33654506842_9d838a2da3_b.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://bigseventravel.com/wp-content/uploads/2019/06/Screenshot-2019-06-23-at-13.06.47.png', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://s3.amazonaws.com/pas-wordpress-media/wp-content/uploads/2014/02/Keeping-Your-Food-Truck-Business-Rolling.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://www.everydaysouthwest.com/wp-content/uploads/2012/05/Sonoran-Bacon-wrapped-hotdogs-1-of-32.jpg', foodtruck: foodtruck)
+
+puts "One foodtruck added"
+
+# FOODTRUCK 14
+
+foodtruck = Foodtruck.create!(
+  name: "Copper Dog",
+  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape."
+  capacity: 30,
+  price: 20,
+  category: 'Chinese',
+  user: User.all.sample
+)
+Ftphoto.create!(photo: 'http://www.specialtruck.cc/Uploads/5954491abd7bb.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://rh_marketplace.s3.amazonaws.com/cropped/main/HlPVf67T5CwSOWjLywRz_WeChat%20Image_20181105182241.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://www.myjewishlearning.com/wp-content/uploads/2017/12/Chinese-food-on-Christmas.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/06/1600x800/landscape-1517928338-delish-mongolian-ramen-and-meatballs-still001.jpg?resize=480:*', foodtruck: foodtruck)
+
+puts "One foodtruck added"
+
+
+# FOODTRUCK 15
+
+foodtruck = Foodtruck.create!(
+  name: "Copper Dog",
+  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape."
+  capacity: 30,
+  price: 20,
+  category: 'Chinese',
+  user: User.all.sample
+)
+Ftphoto.create!(photo: 'http://www.specialtruck.cc/Uploads/5954491abd7bb.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://rh_marketplace.s3.amazonaws.com/cropped/main/HlPVf67T5CwSOWjLywRz_WeChat%20Image_20181105182241.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://www.myjewishlearning.com/wp-content/uploads/2017/12/Chinese-food-on-Christmas.jpg', foodtruck: foodtruck)
+Ftphoto.create!(photo: 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/06/1600x800/landscape-1517928338-delish-mongolian-ramen-and-meatballs-still001.jpg?resize=480:*', foodtruck: foodtruck)
 
 puts "One foodtruck added"
 
