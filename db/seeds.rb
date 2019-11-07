@@ -251,7 +251,7 @@ puts "One foodtruck added"
 
 foodtruck = Foodtruck.create!(
   name: "Eat my truck",
-  description: "We revisit the American classic, with the refined products and the know-how of the French gastronomy. The Truck travels the whole of Belgium for all your private events, corporate, brunch weddings, etc."
+  description: "We revisit the American classic, with the refined products and the know-how of the French gastronomy. The Truck travels the whole of Belgium for all your private events, corporate, brunch weddings, etc.",
   capacity: 80,
   price: 12,
   category: 'American',
@@ -269,7 +269,7 @@ puts "One foodtruck added"
 foodtruck = Foodtruck.create!(
   name: "Wan thai",
   description: "Our Thai-Lounge truck meets all safety and hygiene standards. It is checked annually by approved inspection bodies.
-Discover, taste, taste we will delight your taste buds, with real quality products and a different cuisine, original or authentic."
+Discover, taste, taste we will delight your taste buds, with real quality products and a different cuisine, original or authentic.",
   capacity: 50,
   price: 15,
   category: 'thai',
@@ -286,7 +286,7 @@ puts "One foodtruck added"
 
 foodtruck = Foodtruck.create!(
   name: "Copper Dog",
-  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape."
+  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape.",
   capacity: 30,
   price: 20,
   category: 'Mexican',
@@ -303,7 +303,7 @@ puts "One foodtruck added"
 
 foodtruck = Foodtruck.create!(
   name: "Copper Dog",
-  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape."
+  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape.",
   capacity: 30,
   price: 20,
   category: 'Chinese',
@@ -321,7 +321,7 @@ puts "One foodtruck added"
 
 foodtruck = Foodtruck.create!(
   name: "Copper Dog",
-  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape."
+  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape.",
   capacity: 30,
   price: 20,
   category: 'Chinese',
