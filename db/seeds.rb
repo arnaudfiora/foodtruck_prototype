@@ -80,11 +80,11 @@ foodtruck = Foodtruck.create!(
   category: 'Italian',
   user: User.all.sample
 )
+Ftphoto.create!(photo: 'https://www.chouxdebruxelles.be/wp-content/uploads/2016/08/gio-s-strada-foodtruck-traiteur-catering_06.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://s3-media4.fl.yelpcdn.com/bphoto/BW1fVd1W2p7H-pTL-LzA9g/o.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://s3-media4.fl.yelpcdn.com/bphoto/_KMvAKZwW0Eb4GUCEXOk1A/o.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'https://s3-media3.fl.yelpcdn.com/bphoto/Y8sGCnFdnePxvmcDik_AEw/o.jpg', foodtruck: foodtruck)
 Ftphoto.create!(photo: 'http://www.giosstrada.be/images/011.jpg', foodtruck: foodtruck)
-Ftphoto.create!(photo: 'https://www.chouxdebruxelles.be/wp-content/uploads/2016/08/gio-s-strada-foodtruck-traiteur-catering_06.jpg', foodtruck: foodtruck)
 
 puts "One foodtruck added"
 

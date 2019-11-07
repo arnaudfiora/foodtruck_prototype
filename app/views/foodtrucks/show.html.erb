@@ -1,33 +1,39 @@
 <%= render "shared/navbar" %>
 
 <div class="show-page-wrapper">
+
   <div class="row">
+
     <div class="mb-4 col-4">
       <div class="show-page-cell show-page-cell-text-center">
         <h1> <%= @foodtruck.name %> </h1>
         <h3><%= @foodtruck.category %></h3>
-        <h3>qsdqsdqs</h3>
-        <h3>sdqsds</h3>
       </div>
     </div>
+
     <div class="mb-4 col-8">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <% @foodtruck.ftphotos.each_with_index do |photo, index| %>
+            <% if index == 0 %>
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <% else %>
+              <li data-target="#carouselExampleIndicators" data-slide-to="<% index %>"></li>
+            <% end %>
+          <% end %>
         </ol>
+
         <div class="carousel-inner">
-          <div class="carousel-item show-page-image active">
-            <img src="<%= @foodtruck.ftphotos.first.photo %>" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item show-page-image">
-            <img src="<%= @foodtruck.ftphotos.second.photo %>" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item show-page-image">
-            <img src="<%= @foodtruck.ftphotos.third.photo %>" class="d-block w-100" alt="...">
-          </div>
+          <% @foodtruck.ftphotos.each_with_index do |photo, index| %>
+            <% if index == 0 %>
+              <div class="carousel-item show-page-image active"><img src="<%= photo.photo %>" class="d-block w-100" alt="..."></div>
+            <% else %>
+              <div class="carousel-item show-page-image"><img src="<%= photo.photo %>" class="d-block w-100" alt="..."></div>
+            <% end %>
+          <% end %>
         </div>
+
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -36,56 +42,25 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+
       </div>
     </div>
-    <div class="mb-4 col-8">
+
+    <div class="mb-4 col-12">
       <div class="show-page-cell show-page-cell-details">
         <div class="show-page-cell-detail-header">
           <div>
-            <p>qsdqsd</p>
-            <p>qsdqsd</p>
-            <p>qsdqsdqds</p>
+            <p>Price: <%= @foodtruck.price %>€ per person - Capacity: max <%= @foodtruck.capacity %> persons</p>
           </div>
           <div>
-            <button class="btn btn-primary">qsdqsdqs</button>
+            <%= link_to "Book this truck", new_foodtruck_booking_path(@foodtruck), class: "btn btn-primary" %>
           </div>
         </div>
         <div class="show-page-cell-detail-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae libero quas nihil iste. Maxime pariatur officiis repellat itaque excepturi laudantium, nemo similique quae quibusdam magnam tenetur nihil ab deserunt ad?</p>
+          <p><%= @foodtruck.description %></p>
         </div>
       </div>
     </div>
-    <div class="mb-4 col-4">
-      <div class="show-page-cell">
-        <div>
-          <img src="" alt="">
-          <p>qsdsq</p>
-        </div>
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto blanditiis, error nesciunt quas. Architecto quae hic illum odio vero fuga. Optio doloribus dolor, at earum eligendi perferendis et eaque delectus.</p>
-        </div>
-      </div>
-    </div>
+
   </div>
-</div>
-
-
-
-<div class="wrapper">
-
-  <div class="wrapper-row-1">
-    <div class="container-show-text">
-      <div>
-        <h1> <%= @foodtruck.name %> </h1>
-        <h2>  </h2>
-      </div>
-
-
-
-  <div class="container-show-description">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
 </div>
