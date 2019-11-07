@@ -44,7 +44,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :confirmed)
+    params.require(:booking).permit(:date, :booking_status)
   end
 
   def set_foodtruck
