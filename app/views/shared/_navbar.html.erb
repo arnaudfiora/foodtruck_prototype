@@ -11,11 +11,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link text-ft-yellow" href="#">Home</a>
+        <%= link_to "Home", root_path, class: "nav-link text-ft-yellow" %>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link text-ft-yellow" href="#">Dashboard</a>
-      </li> -->
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src='<%= current_user.avatar %>' />
