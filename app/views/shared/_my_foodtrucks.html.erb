@@ -1,22 +1,10 @@
-<%= render 'shared/navbar' %>
-<%= render 'shared/banner' %>
-
-<div class="search-bar">
-  <%= form_tag root_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a foodtruck"%>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+<div class="dashboard-title">
+  <h2>My foodtrucks -<%= link_to "Add one", new_foodtruck_path, class: "new-ft-button"%></h2>
 </div>
 
 <div class="home-container">
-
   <% @foodtrucks.each do |foodtruck| %>
-
     <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
-
         <div class="card-foodtruck">
 
           <% if foodtruck.ftphotos.first %>
@@ -34,5 +22,8 @@
         </div>
     <% end %>
   <% end %>
+</div>
 
+<div class="line-separator">
+  <div class="line"></div>
 </div>

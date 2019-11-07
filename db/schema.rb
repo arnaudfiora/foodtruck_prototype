@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_125939) do
+ActiveRecord::Schema.define(version: 2019_11_07_111038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
     t.string "date"
-    t.boolean "confirmed", default: false
     t.bigint "foodtruck_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "booking_status", default: "Pending"
     t.index ["foodtruck_id"], name: "index_bookings_on_foodtruck_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_125939) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
-    t.string "avatar"
+    t.string "avatar", default: "http://www.baytekent.com/wp-content/uploads/2016/12/facebook-default-no-profile-pic1.jpg"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
