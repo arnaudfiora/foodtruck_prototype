@@ -1,13 +1,18 @@
 <%= render 'shared/navbar' %>
 
 <div class="dashboard-banner">
-  <h1><%= current_user.username %>'s Dashboard</h1>
+  <% if current_user.username %>
+    <h1><%= current_user.username %>'s Dashboard</h1>
+  <% else %>
+    <h1>Your Dashboard</h1>
+  <% end %>
+
 </div>
 
 <div class="line-separator">
   <div class="line"></div>
 </div>
-<% raise %>
+
 <%= render 'shared/my_foodtrucks' %>
 
 <%= render 'shared/bookings_received' %>
