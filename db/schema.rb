@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_11_07_111038) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "booking_status", default: "pending"
+    t.string "booking_status", default: "Pending"
     t.index ["foodtruck_id"], name: "index_bookings_on_foodtruck_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
