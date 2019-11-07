@@ -15,10 +15,11 @@
 
       <div class="booking-actions">
         <% if booking.booking_status == 'Confirmed' %>
-          <!-- <i class="fas fa-check"></i> -->
-          <p style="font-weight: bold; color: green">Booking validated</p>
+          <p style="font-weight: bold; color: green">You accepted this booking</p>
+        <% elsif booking.booking_status == 'Declined' %>
+          <p style="font-weight: bold; color: red">You declined this booking</p>
         <% else %>
-          <%= link_to "Validate", edit_foodtruck_booking_path(booking.foodtruck, booking) %>
+          <%= link_to "Accept or Refuse", edit_foodtruck_booking_path(booking.foodtruck, booking), class: "btn btn-primary" %>
         <% end %>
       </div>
 

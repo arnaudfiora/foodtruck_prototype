@@ -4,7 +4,6 @@
 
 <div class="bookings-container">
   <% @bookings_made.each do |booking| %>
-
     <div class="booking">
 
       <img src='<%= booking.user.avatar %>' class="avatar-large" />
@@ -12,6 +11,16 @@
       <div class="booking-content">
         <p><small><%= booking.user.username %></small></p>
         <p><strong><%= booking.foodtruck.name %></strong> - <%= booking.date %></p>
+      </div>
+
+      <div class="booking-actions">
+        <% if booking.booking_status == 'Confirmed' %>
+          <p style="font-weight: bold; color: green">Booking accepted</p>
+        <% elsif booking.booking_status == 'Declined' %>
+          <p style="font-weight: bold; color: red">Booking declined</p>
+        <% else %>
+          <p style="font-weight: bold; color: orange">Booking pending</p>
+        <% end %>
       </div>
 
     </div>
