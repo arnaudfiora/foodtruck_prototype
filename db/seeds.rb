@@ -26,6 +26,12 @@ users_attributes = [
     avatar: 'https://avatars1.githubusercontent.com/u/54903820?s=400&v=4',
     password: 'jeremyjeremy'
   },
+   {
+    username: 'romain',
+    email: 'rom@live.be',
+    avatar: 'https://avatars0.githubusercontent.com/u/55390887?s=400&v=4',
+    password: 'romrom'
+  },
   {
     username: 'Eloise',
     email: 'Eloise@25927.be',
