@@ -1,6 +1,11 @@
+Booking.destroy_all
+puts 'All bookings destroyed'
 Ftphoto.destroy_all
+puts 'All photos destroyed'
 Foodtruck.destroy_all
+puts 'All foodtrucks destroyed'
 User.destroy_all
+puts 'All users destroyed'
 
 # ----- ADDING USERS ----- #
 
@@ -60,7 +65,7 @@ users_attributes = [
 
 User.create!(users_attributes)
 
-puts "4 users created"
+puts "----> 8 users created"
  #
 
 # ----- ADDING FOODTRUCKS ----- #
@@ -101,7 +106,6 @@ Ftphoto.create!(photo: 'https://ilovememphisblog.com/wp-content/uploads/2017/11/
 puts "One foodtruck added"
 
 # FOODTRUCK 3
-
 foodtruck = Foodtruck.create!(
   name: "Bagel Street",
   description: "We offer 2 versions of bagel (hot and cold). Fresh fries of the day cooked in beef fat, seasoned with various aromatic salts of your choice and accompanied by ''made in truck'' sauce.",
@@ -119,7 +123,6 @@ Ftphoto.create!(photo: 'https://assets.kraftfoods.com/recipe_images/183286-18328
 puts "One foodtruck added"
 
 # FOODTRUCK 4
-
 foodtruck = Foodtruck.create!(
   name: "Sweeto Burrito",
   description: "specializing in fresh and flavourful burritos, tacos, salads & more, made from farm-fresh Belgian produce and Mexican spices. You can roll your own burrito :Fresh, fast, flavorful and made-to-order, just as you want it.",
@@ -137,7 +140,6 @@ Ftphoto.create!(photo: 'https://sweetoburrito.com/wp-content/uploads/2016/03/DSC
 puts "One foodtruck added"
 
 # FOODTRUCK 5
-
 foodtruck = Foodtruck.create!(
   name: "Louis Pizza",
   description: "
@@ -157,7 +159,6 @@ puts "One foodtruck added"
 
 
 # FOODTRUCK 6
-
 foodtruck = Foodtruck.create!(
   name: "Big Wang's",
   description: "Invite Louis with his professional mobile oven and you have the guarantee that your guests will be served delicious, real and hot pizzas. Louis has an open ear for all your wishes and helps you find the most suitable party formula.",
@@ -175,13 +176,12 @@ Ftphoto.create!(photo: 'https://images.squarespace-cdn.com/content/v1/59555598d4
 puts "One foodtruck added"
 
 # FOODTRUCK 6
-
 foodtruck = Foodtruck.create!(
   name: "Happy Ice cream",
   description: "Happy  Ice Cream is created with this same passion. Our distinctive recipes combine rich ingredients to create mouthwatering flavors. Each flavor has been tested and refined to ensure every ice cream we shape tastes as good as possible. We have two different food trucks, both pink.",
   capacity: 50,
-  price: 3,
-  category: 'desert',
+  price: 10,
+  category: 'Desert',
   user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://image.made-in-china.com/2f0j00hFptDGZIOugB/5-Meter-Mobile-Ice-Cream-Fast-Food-Truck-Van-for-Sale.jpg', foodtruck: foodtruck)
@@ -192,15 +192,13 @@ Ftphoto.create!(photo: 'https://previews.123rf.com/images/chudtsankov/chudtsanko
 
 puts "One foodtruck added"
 
-
 # FOODTRUCK 8
-
 foodtruck = Foodtruck.create!(
   name: "Sisters cupcakes",
   description: "We are two sisters with a real food truck caravan with  more than 20 different cupcakes and cheesecakes: made with a lot of love and you can taste it! We have two different foodtrucks.",
   capacity: 40,
-  price: 3,
-  category: 'desert',
+  price: 10,
+  category: 'Desert',
   user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://bestofnj.com/wp-content/uploads/2018/04/House-of-Cupcakes_Food-Truck-e1523992752202.jpg', foodtruck: foodtruck)
@@ -212,13 +210,12 @@ Ftphoto.create!(photo: 'http://www.sparkmybiz.com/wp-content/uploads/House-of-Cu
 puts "One foodtruck added"
 
 # FOODTRUCK 9
-
 foodtruck = Foodtruck.create!(
   name: "La charette gourmande",
   description: "We offer a varied choice of giant crepes 'sweet', pancakes Breton buckwheat 'salted' ... Everything is homemade in front of you, with products of the highest quality, 100 percent handmade.Whether it's an anniversary, a communion, a wedding, a company party, a neighborhood party, a festival ..., each event will be personalized and taken in hand by La Charrette Gourmande. Our motto: flexibility and quality to serve you!",
   capacity: 30,
-  price: 5,
-  category: 'desert',
+  price: 12,
+  category: 'Desert',
   user: User.all.sample
 )
 Ftphoto.create!(photo: 'https://sosoir.lesoir.be/sites/default/files/styles/image_690x460/public/encadre/g2.jpg?itok=2LI6weta', foodtruck: foodtruck)
@@ -230,7 +227,6 @@ Ftphoto.create!(photo: 'http://www.coeurdecrepes.fr/images/gallery/fulls/Coeur_d
 puts "One foodtruck added"
 
 # FOODTRUCK 10
-
 foodtruck = Foodtruck.create!(
   name: "Le vagabond",
   description: "We offer 2 versions of bagel (hot and cold). Fresh fries of the day cooked in beef fat, seasoned with various aromatic salts of your choice and accompanied by ''made in truck'' sauce.",
@@ -248,7 +244,6 @@ Ftphoto.create!(photo: 'https://www.austinchronicle.com/imager/b/original/228227
 puts "One foodtruck added"
 
 # FOODTRUCK 11
-
 foodtruck = Foodtruck.create!(
   name: "Eat my truck",
   description: "We revisit the American classic, with the refined products and the know-how of the French gastronomy. The Truck travels the whole of Belgium for all your private events, corporate, brunch weddings, etc.",
@@ -265,14 +260,13 @@ Ftphoto.create!(photo: 'https://cf-images.us-east-1.prod.boltdns.net/v1/static/5
 puts "One foodtruck added"
 
 # FOODTRUCK 12
-
 foodtruck = Foodtruck.create!(
   name: "Wan thai",
   description: "Our Thai-Lounge truck meets all safety and hygiene standards. It is checked annually by approved inspection bodies.
 Discover, taste, taste we will delight your taste buds, with real quality products and a different cuisine, original or authentic.",
   capacity: 50,
   price: 15,
-  category: 'thai',
+  category: 'Thai',
   user: User.all.sample
 )
 Ftphoto.create!(photo: 'http://www.wanthaifood.be/images/galery/wanthaifood17.jpg', foodtruck: foodtruck)
@@ -283,7 +277,6 @@ Ftphoto.create!(photo: 'https://www.errenskitchen.com/wp-content/uploads/2014/04
 puts "One foodtruck added"
 
 # FOODTRUCK 13
-
 foodtruck = Foodtruck.create!(
   name: "Copper Dog",
   description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape.",
@@ -300,12 +293,11 @@ Ftphoto.create!(photo: 'https://www.everydaysouthwest.com/wp-content/uploads/201
 puts "One foodtruck added"
 
 # FOODTRUCK 14
-
 foodtruck = Foodtruck.create!(
-  name: "Copper Dog",
-  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape.",
-  capacity: 30,
-  price: 20,
+  name: "Aotin",
+  description: "Aotin is a super good Chinese food truck. We love to go to events and offer authentic, rich and flavourful Chinese cuisine for people to discover this amazing culture. Book us and you won't regret it",
+  capacity: 50,
+  price: 15,
   category: 'Chinese',
   user: User.all.sample
 )
@@ -316,22 +308,25 @@ Ftphoto.create!(photo: 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/06/16
 
 puts "One foodtruck added"
 
+puts "-----> 14 foodtrucks created"
 
-# FOODTRUCK 15
+# ----- ADDING BOOKINGS ----- #
 
-foodtruck = Foodtruck.create!(
-  name: "Copper Dog",
-  description: "Food truck Copperdog is the result of the creativity of Jurgen Keppens. The truck - an American Ford ambulance - is unique in the Belgian food truck landscape.",
-  capacity: 30,
-  price: 20,
-  category: 'Chinese',
-  user: User.all.sample
-)
-Ftphoto.create!(photo: 'http://www.specialtruck.cc/Uploads/5954491abd7bb.jpg', foodtruck: foodtruck)
-Ftphoto.create!(photo: 'https://rh_marketplace.s3.amazonaws.com/cropped/main/HlPVf67T5CwSOWjLywRz_WeChat%20Image_20181105182241.jpg', foodtruck: foodtruck)
-Ftphoto.create!(photo: 'https://www.myjewishlearning.com/wp-content/uploads/2017/12/Chinese-food-on-Christmas.jpg', foodtruck: foodtruck)
-Ftphoto.create!(photo: 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/06/1600x800/landscape-1517928338-delish-mongolian-ramen-and-meatballs-still001.jpg?resize=480:*', foodtruck: foodtruck)
+40.times do
+  Booking.create!(
+    date: 'tbd',
+    foodtruck: Foodtruck.all.sample,
+    user: User.all.sample,
+    booking_status: %w[Pending Confirmed Declined].sample
+  )
+end
+puts "-----> 40 bookings created"
 
-puts "One foodtruck added"
 
-puts "X foodtrucks created"
+
+
+
+
+
+
+

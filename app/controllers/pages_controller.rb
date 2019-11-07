@@ -2,10 +2,10 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
-    if params[:query] == nil
+    if params[:query].nil? || params[:query] == ''
       @foodtrucks = Foodtruck.all
     else
-    @foodtrucks = Foodtruck.search_by_name_and_description_and_user(params[:query])
+      @foodtrucks = Foodtruck.search_by_name_and_description_and_user_and_category(params[:query])
     end
   end
 
