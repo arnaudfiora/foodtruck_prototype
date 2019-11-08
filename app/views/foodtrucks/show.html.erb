@@ -59,12 +59,43 @@
         <div class="show-page-cell-detail-body">
           <p><%= @foodtruck.description %></p>
         </div>
-        <div class="add-review">
-          <%= link_to "add a review", new_foodtruck_review_path(@foodtruck)%>
-          <%= link_to "show reviews", foodtruck_review_path(@foodtruck)%>
-        </div>
       </div>
     </div>
 
   </div>
 </div>
+
+<div class="line-separator">
+  <div class="line"></div>
+</div>
+
+<div class="bookings-container">
+
+  <% @foodtruck.reviews.each do |review| %>
+    <div class="booking">
+
+      <img src='<%= review.user.avatar %>' class="avatar-large" />
+
+      <div class="booking-content">
+        <p><small><%= review.user.username %></small></p>
+        <p><%= review.content %></p>
+      </div>
+
+      <div class="booking-actions">
+        <% review.rating.times do %>
+          <span><i class="fas fa-star" style="color: orange"></i></span>
+        <% end %>
+        <% (5-review.rating).times do %>
+          <span><i class="fas fa-star" style="color: grey"></i></span>
+        <% end %>
+
+      </div>
+
+    </div>
+  <% end %>
+
+  <%= link_to "Add review", new_foodtruck_review_path(@foodtruck), class: "btn btn-primary w-100"%>
+
+</div>
+
+
