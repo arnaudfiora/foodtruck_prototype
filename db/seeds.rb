@@ -31,7 +31,7 @@ users_attributes = [
     password: 'jeremyjeremy'
   },
    {
-    username: 'romain',
+    username: 'Romain',
     email: 'rom@live.be',
     avatar: 'https://avatars0.githubusercontent.com/u/55390887?s=400&v=4',
     password: 'romrom'
