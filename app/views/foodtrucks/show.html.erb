@@ -5,14 +5,14 @@
   <div class="row">
 
     <div class="mb-4 col-4">
-      <div class="show-page-cell show-page-cell-text-center">
+      <div class="show-page-cell show-page-cell-text-center foodtruck-show-card">
         <h1> <%= @foodtruck.name %> </h1>
         <h3><%= @foodtruck.category %></h3>
       </div>
     </div>
 
     <div class="mb-4 col-8">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide foodtruck-show-card" data-ride="carousel">
 
         <ol class="carousel-indicators">
           <% @foodtruck.ftphotos.each_with_index do |photo, index| %>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="mb-4 col-12">
-      <div class="show-page-cell show-page-cell-details">
+      <div class="show-page-cell show-page-cell-details foodtruck-show-card">
         <div class="show-page-cell-detail-header">
           <div>
             <p>Price: <%= @foodtruck.price %>€ per person - Capacity: max <%= @foodtruck.capacity %> persons</p>
