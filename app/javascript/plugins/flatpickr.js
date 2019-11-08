@@ -4,5 +4,6 @@ const datepicker = document.querySelector(".datepicker")
 const unavailabilities = JSON.parse(datepicker.dataset.unavailableOn)
 flatpickr(".datepicker", {
   altInput: true,
-  disable: unavailabilities
+  disable: unavailabilities,
+  minDate: Date.now()
 })
