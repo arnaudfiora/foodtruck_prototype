@@ -1,9 +1,9 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/banner' %>
 
-<div class="search-bar w-100">
-  <%= form_tag root_path, method: :get do %>
-    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a foodtruck"%>
+<div class="search-bar">
+  <%= form_tag root_path, class: "home-search", method: :get do %>
+    <%= text_field_tag :query, params[:query], class: "form-control transparent", placeholder: "Find a foodtruck"%>
     <%= submit_tag "Search", class: "btn btn-primary", hidden: true %>
   <% end %>
 </div>

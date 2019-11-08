@@ -4,6 +4,7 @@
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-foodtruck {
@@ -55,7 +56,8 @@
 .search-bar {
   width: 900px;
   margin: 0 auto;
-  padding-top: 30px;
-  display: flex;
-  justify-content: center;
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
