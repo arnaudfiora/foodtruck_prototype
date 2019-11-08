@@ -2,8 +2,15 @@
 <div id="container">
 <h1>New foodtruck booking</h1>
 <%= simple_form_for ([@foodtruck,@booking]) do |f| %>
-
-  <%= f.input :date, as:'string', input_html: {class: "datepicker"}%>
+  <%= f.input :date,
+              as:'string',
+              input_html: {
+                class: "datepicker",
+                data: {
+                  unavailable_on: @foodtruck.bookings.pluck(:date).to_json
+                }
+              }
+  %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
 

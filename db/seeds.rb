@@ -314,7 +314,7 @@ puts "-----> 14 foodtrucks created"
 
 40.times do
   Booking.create!(
-    date: 'tbd',
+    date: Time.zone.now,
     foodtruck: Foodtruck.all.sample,
     user: User.all.sample,
     booking_status: %w[Pending Confirmed Declined].sample
