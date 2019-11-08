@@ -1,0 +1,8 @@
+<div class="reviews">
+  <h1 style="color:white">All the reviews of the foodtruck <% @foodtruck.name %></h1>
+    <% @reviews.each do|review| %>
+    <p style="color:white" w-40 h-40>Review from: <%=review.user.username %> <img src="<%= current_user.avatar %>" alt=""></p>
+    <p style="color:white">content: <%= review.content %></p>
+    <p style="color:white">rating: <%= review.rating %></p>
+  <% end %>
+</div>

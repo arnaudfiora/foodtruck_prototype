@@ -59,6 +59,10 @@
         <div class="show-page-cell-detail-body">
           <p><%= @foodtruck.description %></p>
         </div>
+        <div class="add-review">
+          <%= link_to "add a review", new_foodtruck_review_path(@foodtruck)%>
+          <%= link_to "show reviews", foodtruck_review_path(@foodtruck)%>
+        </div>
       </div>
     </div>
 
