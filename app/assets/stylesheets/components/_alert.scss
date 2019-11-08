@@ -44,14 +44,19 @@
 .sign-up-btn {
 
   border-color: black;
-  border-radius: 15px;
 box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 padding: 5px, 5px;
 margin: 2px;
 
+}
 
+.sign-up-btn:hover {
+  background-color: #212227;
 
 }
 
+.btn-lg{
+  width: 100px;
+}
 
 
