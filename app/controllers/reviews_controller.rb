@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     @review.foodtruck = @foodtruck
     @review.user = current_user
     if @review.save
-      redirect_to dashboard_path
+      redirect_to foodtruck_path(@foodtruck)
     else
       render :new
     end
@@ -23,7 +23,9 @@ class ReviewsController < ApplicationController
     @foodtruck = Foodtruck.find(params[:foodtruck_id])
     @review = Review.new
   end
+
   private
+
   def review_params
     params.require(:review).permit(:content, :rating)
   end

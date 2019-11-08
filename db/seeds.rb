@@ -1,11 +1,10 @@
+require 'faker'
+
+Review.destroy_all
 Booking.destroy_all
-puts 'All bookings destroyed'
 Ftphoto.destroy_all
-puts 'All photos destroyed'
 Foodtruck.destroy_all
-puts 'All foodtrucks destroyed'
 User.destroy_all
-puts 'All users destroyed'
 
 # ----- ADDING USERS ----- #
 
@@ -322,7 +321,17 @@ puts "-----> 14 foodtrucks created"
 end
 puts "-----> 40 bookings created"
 
+# ----- ADDING REVIEWS ----- #
 
+80.times do
+  Review.create(
+    content: Faker::Restaurant.review,
+    rating: [0, 1, 2, 3, 4, 5].sample,
+    user: User.all.sample,
+    foodtruck: Foodtruck.all.sample
+  )
+end
+puts "-----> 80 reviews created"
 
 
 
