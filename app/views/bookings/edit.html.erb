@@ -1,5 +1,8 @@
+<div id="container">
+
 <h1>Edit foodtruck booking</h1>
 <%= simple_form_for ([@foodtruck, @booking]) do |f| %>
   <%= f.input :booking_status, :as => :select, :collection => Booking::STATUS, include_blank: false %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <%= f.submit "Submit", class: "btn btn-primary btn-block" %>
 <% end %>
+</div>
