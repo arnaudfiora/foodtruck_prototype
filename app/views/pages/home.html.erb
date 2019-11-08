@@ -1,7 +1,7 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/banner' %>
 
-<div class="search-bar form-inline">
+<div class="search-bar w-100">
   <%= form_tag root_path, method: :get do %>
     <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a foodtruck"%>
     <%= submit_tag "Search", class: "btn btn-primary", hidden: true %>
@@ -11,7 +11,6 @@
 <div class="home-container">
 
   <% @foodtrucks.each do |foodtruck| %>
-
     <%= link_to foodtruck_path(foodtruck), class: "link-to" do %>
 
         <div class="card-foodtruck">
@@ -28,6 +27,7 @@
               <p><%= foodtruck.category %> - Up to <%= foodtruck.capacity %> persons - <%= foodtruck.price %>€/per person</p>
             </div>
           </div>
+
         </div>
     <% end %>
   <% end %>
