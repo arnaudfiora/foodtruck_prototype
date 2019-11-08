@@ -1,6 +1,6 @@
 class FoodtrucksController < ApplicationController
   before_action :set_foodtruck, only: :show
-
+  skip_before_action :authenticate_user!, only: :show
   def show; end
 
   def new
